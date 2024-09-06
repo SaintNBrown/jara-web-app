@@ -38,7 +38,7 @@ public class User extends AbstractAuditingEntity<Long>{
 
     @Column(name = "phone_number", length = 10)
     @Pattern(regexp = "^\\d{10}$")
-    private Integer phoneNumber;
+    private String phoneNumber;
 
     @Column(name = "first_name")
     private String firstName;
@@ -81,11 +81,11 @@ public class User extends AbstractAuditingEntity<Long>{
         this.password = password;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
