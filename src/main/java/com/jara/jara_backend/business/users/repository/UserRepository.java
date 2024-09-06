@@ -10,6 +10,7 @@ import com.jara.jara_backend.business.users.entities.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    Optional<User> findByUserId(Long userId);
+//    Optional<User> findByUserId(Long userId);
+    Optional<User> findUserById(Long userId);
 
 }
