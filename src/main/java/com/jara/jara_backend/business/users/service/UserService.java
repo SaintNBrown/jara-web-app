@@ -15,7 +15,7 @@ public class UserService {
 
     public User findOrCreateUserFromToken(Jwt jwt) {
         Long userId = jwt.getClaim("sub");
-        User user = userRepository.findByUserId(userId).get();
+        User user = userRepository.findUserById(userId).get();
         if (user == null) {
             user = new User();
             user.setId(userId);
